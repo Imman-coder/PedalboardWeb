@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="litegraph.css" />
+    <link rel="stylesheet" href="litegraph-editor.css" />
+    <script src="./Nodes//utils.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="Nodes/InputPorts.js"></script>
+    <script defer src="Nodes/ControllerNodes/ExpressionInput.js"></script>
+    <script defer src="Nodes/ControllerNodes/TwoInput.js"></script>
+    <script defer src="Nodes/ControllerNodes/OneInput.js"></script>
+    <script defer src="Nodes/ControllerNodes/LadderInput.js"></script>
+    <script defer src="Nodes/HandlerNode/ButtonHandler.js"></script>
+    <script defer src="Nodes/HandlerNode/ExpressionHandler.js"></script>
+    <script defer src="Nodes/AssignmentNode/AssignmentNode.js"></script>
+    <script defer src="Nodes/BankNode/BankNode.js"></script>
+    <script defer src="Nodes/BankNode/PresetNode.js"></script>
+    <script defer src="Nodes/BankNode/ActionNode.js"></script>
+    <script defer src="Nodes/AssignmentNode/PresetAssignmentNode.js"></script>
+    <script defer src="mobile.js"></script>
+    <script src="litegraph.js"></script>
+    <script defer src="configurator.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav">
+      <div id="mode"></div>
+      <div class="tabs">
+        <div class="tab selected">
+          <span>Configurator</span>
+        </div>
+        <div class="tab">
+          <span>Global Bank </span>
+        </div>
+        <div class="tab">
+          <span>Bank 1</span>
+        </div>
+        <div class="tab">
+          <span>Bank 2</span>
+        </div>
+        <div class="tab">
+          <span>Bank 3</span>
+        </div>
+        <div class="tab">
+          <span>Bank 4</span>
+        </div>
+        <div class="tab">
+          <span>Bank 5</span>
+        </div>
+        <div class="tab">
+          <span>Bank 6</span>
+        </div>
+        <div class="tab">
+          <span>Bank 7</span>
+        </div>
+        <div class="tab">
+          <span>Bank 8</span>
+        </div>
+        <div class="tab">
+          <span>Bank 9</span>
+        </div>
+        <div class="tab">
+          <span>Bank 10</span>
+        </div>
+      </div>
+      <!-- <div class="left"></div>
+      <div class="middle"></div>
+      <div class="right"></div> -->
+    </div>
+    <div class="content">
+      <div class="sidebar">
+        <div class="sidebar-item">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABNklEQVR4nOWVTUoDQRBGW9f+oN4iHkC8ge4CIVmqJ8hlErfGZY6UXUAJ5ABJYPpVUlIwwtB2txNtRbCgYGCqv1fzVXePc/8igFtgJSJqac/ATUnA87t4AzIpIl5V1SUwjwDmqtrZS0xVD4ExMBWRAfAI7ELxBmRnNXXt1NaaRhIgIg8pMWmf96nuj4DFdwHAUlVPYt0PM4tegJ6qHlsCXWCWAQ0/ALz318A6Jq6q55EvPrN3kfq1aUVt8t5fAZtgQS8zs35QuzENl4vmgbI0S1K15nUAWGXFvwA43QuQsKibqrf939qizJBnNtBI9xfAa+shf7ZNRaRvnte+D2Li2W364wfNwo55gavizqVCVQ+Cy24MbDPdboGR2VdfdiPTSAIS0E6x6zoVwCQCeCoi7n7jl/mn4w2Une2ScQQvyQAAAABJRU5ErkJggg=="
+            alt="settings"
+            id="setting-btn"
+          />
+        </div>
+      </div>
+      <div class="editor-area">
+        <canvas class="canvas" id="mycanvas"></canvas>
+      </div>
+    </div>
+    <div class="dialog-scrim dialog-visible2">
+      <div class="dialog-card">
+        <div class="menu">
+          <span>General</span>
+          <span>About</span>
+        </div>
+        <div class="body">
+          <div class="grid">
+            Load / Save
+            <div class="">
+              <button>New</button>
+              <button>Load</button>
+              <button>Save</button>
+            </div>
+            <span>External Pedalboard Link:</span>
+            <input type="text" />
+            <span>Mobile Mode:</span>
+            <input id="mobile-mode" onchange="mobileModeChanged(this)" type="checkbox" />
+            <button>Clear Local Storage</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

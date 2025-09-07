@@ -1,0 +1,185 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  height: 100dvh;
+  overflow: hidden;
+}
+
+:root {
+  --bg: #0b0f14;
+  --panel: #131a22;
+  --elev: #1a2430;
+  --text: #e5edf5;
+  --muted: #9bb0c2;
+  --accent: #5cc8ff;
+  --ring: #2a9df4;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --radius: 14px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  background-color: rgb(44, 44, 44);
+}
+
+.nav {
+  height: 40px;
+  width: -webkit-fill-available;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.right img {
+  color: aliceblue;
+}
+
+.nav .tabs {
+  margin: 0px 30px;
+  display: flex;
+}
+
+.nav .tab{
+  user-select: none;
+  height: calc(100% - 2px);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.nav .tab.selected{
+  background-color: #7c7c7c46;
+}
+
+.nav .tab:hover{
+  background-color: #6e6e6ea6;
+}
+
+.content {
+  height: calc(100% - 5%);
+  display: flex;
+}
+
+.sidebar {
+  width: 76px;
+  height: 100%;
+}
+
+.editor-area {
+  height: 100%;
+  flex-grow: 1;
+  width: calc(100% - 76px);
+}
+
+.nav #mode {
+  color: darkcyan;
+  font-size: larger;
+  user-select: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  margin: 5px;
+}
+
+.title {
+  font-size: 2rem;
+  color: gray;
+  user-select: none;
+  cursor: inherit;
+}
+
+.dialog-scrim {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(32, 32, 32, 0.26);
+  backdrop-filter: blur(4px);
+  display: flex;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-visible {
+  display: inherit;
+}
+
+.dialog-card {
+  height: 40%;
+  width: 50%;
+  background-color: rgb(58, 58, 58);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dialog-card .body .grid {
+  padding: 6px 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  /* justify-items: left; */
+}
+
+input {
+  border-radius: 6px;
+  padding: 8px 8px;
+  border: none;
+  background-color: antiquewhite;
+}
+
+button {
+  background-color: bisque;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.selector {
+  border: none;
+  background-color: transparent;
+}
+/*  */
+/*  */
+
+.menu {
+  display: flex;
+  border-bottom: solid 1px white;
+  border-color: aliceblue;
+}
+
+.menu span {
+  padding: 5px;
+  border-right: solid 1px aliceblue;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu span.selected {
+  background-color: rgba(116, 116, 116, 0.486);
+}
+.menu span:hover {
+  background-color: rgba(116, 116, 116, 0.486);
+}
+
+.menu span:last-child {
+  border: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .dialog-card {
+    width: 90%;
+  }
+}
