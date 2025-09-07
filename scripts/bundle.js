@@ -13,6 +13,10 @@ const outputFile = "dist/bundle.min.js";
 
 orderedFiles.map((e)=>console.log(e));
 
+if (!fs.existsSync("./dist")){
+  fs.mkdirSync("./dist");
+}
+
 fs.writeFileSync(
   outputFile,
   orderedFiles.map((f) => fs.readFileSync(f, "utf8")).join("\n")
